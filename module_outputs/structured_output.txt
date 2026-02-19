@@ -1,0 +1,7 @@
+In Langchain, structured output refers to the practice of having language models return responses in a well defined data format (for example JSON), rather than free-form text. This makes the model output easier to parse and work with programmatically.
+
+Why do we need structured output
+
+1. Data Extraction
+2. API building
+3. Agents
