@@ -5,3 +5,24 @@ Why do we need structured output
 1. Data Extraction
 2. API building
 3. Agents
+
+Ways to get structured output
+
+There are two types of model in Langchain:
+1. Can generate structured output - (with_structure_output())
+2. Cannot generate structured output - Output_parsers
+
+with_structure_output -> data format
+model.invoke()
+
+- TypedDict
+- Pydantic
+- json_schema
+
+TypedDict - TypedDict is a way to define a dictionary in python where you specify what keys and values should exists. It helps ensure that your dictionary follows a specific structure.
+
+why use TypedDict?
+- It tells python what keys are required and what type of values they should have.
+- It does not validate data at runtime (It just helps type hints for better coding).
+
+When you use with_structure_output internally It adds in prompt that - You are an AI assistant that extracts structured insights from text. Given a product review, extract: - Summary: A brief overview of the main points. - Sentiment: Overall tone of the review (positive, neutral, negative). Return the response in JSON format.
