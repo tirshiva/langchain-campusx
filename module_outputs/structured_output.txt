@@ -26,3 +26,22 @@ why use TypedDict?
 - It does not validate data at runtime (It just helps type hints for better coding).
 
 When you use with_structure_output internally It adds in prompt that - You are an AI assistant that extracts structured insights from text. Given a product review, extract: - Summary: A brief overview of the main points. - Sentiment: Overall tone of the review (positive, neutral, negative). Return the response in JSON format.
+
+Pydantic 
+
+Pydantic is a data validation and data parsing library for python. It ensures that the data you work with is correct, structured and type safe.
+
+Use TypedDict if : 
+- You only need type hints (basic structure enforcement)
+- you don't need validation (e.g checking numbers are positive)
+- You trust the LLM to return the correct Data
+
+Use Pydantic if:
+- You need data validation (e.g Sentiment must be "positive", "negative", "neutral")
+- You need default values if the LLM missed the field
+- You want automatic type conversion (e.g "100" -> 100)
+
+Use JSON Schema if: 
+- You don't want to import extra python library (e.g Pydantic)
+- You need validation but don't need python objects
+- You want to define structure in a standard JSON format

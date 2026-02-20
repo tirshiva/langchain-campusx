@@ -2,6 +2,7 @@ langchain
 langchain-ollama 
 langchain-core 
 pydantic
+pydantic[email]
 streamlit
 python-dotenv
 langchain-huggingface
