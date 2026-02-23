@@ -6,3 +6,6 @@ pydantic[email]
 streamlit
 python-dotenv
 langchain-huggingface
+transformers 
+sentence-transformers
+huggingface_hub
